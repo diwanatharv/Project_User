@@ -64,6 +64,7 @@ func GetUser(e echo.Context) error {
 	//creating an instance of the user finding in db
 	// if we are getting the value correponding to that query we are storing it in
 	// the finduser and returning it if no error
+	//ji
 	val, err3 := Rdb.Get(context.Background(), e.QueryParam("userId")).Result()
 	if err3 == redis.Nil { //means the val is not present we have to add it
 		fmt.Println("value is not there")
